@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Chapters List{% endblock %}
+
+{% block content %}
+
+    <center><h1>Список глав</h1></center><hr><br>
+
+    {% if chapter_list %}
+        {% for chapter in chapter_list %}
+            <a href="{% url 'chapter_detail' chapter.id %}">{{ chapter.title }}  стр. {{ chapter.page }}</a><br>
+        {% endfor %}
+    {% else %}
+        Список пустой!
+    {% endif %}
+
+{% endblock %}

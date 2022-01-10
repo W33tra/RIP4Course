@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ book.title }}{% endblock %}
+
+{% block content %}
+
+    <center><h1>{{ book.title }}</h1></center><hr><br>
+
+    <table border="1" cellpadding="5">
+    <tr>
+        <th>Жанр</th>
+        <th>{{ book.genre }}</th>
+    </tr>
+    <tr>
+        <th>Год</th>
+        <th>{{ book.year }}</th>
+    </tr>
+    </table>
+    <br><hr><br>
+    <a href="/app/bookslist">К списку книг</a>
+    <br>
+    <a href="/app/chapterslist">К списку глав</a>
+
+{% endblock %}

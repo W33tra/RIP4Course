@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Books List{% endblock %}
+
+{% block content %}
+
+    <center><h1>Список книг</h1></center><hr><br>
+
+    {% if book_list %}
+        {% for book in book_list %}
+            <a href="{% url 'book_detail' book.id %}">{{ book.title }}  жанр: {{ book.genre }}</a><br>
+        {% endfor %}
+    {% else %}
+        Список пустой!
+    {% endif %}
+
+{% endblock %}

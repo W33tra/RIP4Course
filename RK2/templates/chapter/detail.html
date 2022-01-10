@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ chapter.title }}{% endblock %}
+
+{% block content %}
+
+    <center><h1>{{ chapter.title }}</h1></center><hr><br>
+
+    <table border="1" cellpadding="5">
+    <tr>
+        <th>Страница</th>
+        <th>{{ chapter.page }}</th>
+    </tr>
+    </table>
+    <br><hr><br>
+    <a href="/app/chapterslist">К списку глав</a>
+    <br>
+    <a href="/app/bookslist">К списку книг</a>
+
+{% endblock %}
